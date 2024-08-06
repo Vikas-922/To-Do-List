@@ -24,5 +24,6 @@ listContainer.addEventListener('click', (e)=>{
     else if(e.target.tagName==="SPAN"){
         e.target.parentElement.remove();
     }
-})
+},false);
+
 
