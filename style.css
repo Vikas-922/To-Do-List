@@ -4,6 +4,27 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
+:root{
+   --black-1:black;
+    --black-2:#d6d1d1;
+    --black-3:#555;
+    --black-1-x:white;
+    --place-holder:rgb(172, 161, 161);  /* input box color*/
+     /* color: aliceblue;
+    -black-1:rgb(255, 255, 255);
+    --black-2:#858282;
+    --black-3:#a8a8a8;
+    --black-1-x:rgb(75, 70, 70);*/
+} 
+.dark-theme{
+    color: rgb(255, 255, 255);
+    --black-1:rgb(255, 255, 255);
+    --black-2:#807c7c;
+    --black-3:#a8a8a8;
+    --black-1-x:rgb(75, 70, 70);
+    --place-holder:rgb(92, 85, 85);
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -13,32 +34,36 @@
 .todo-app{
     width: 100%;
     max-width: 545px;
-    background: white;
+    background: var(--black-1-x);
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
 .todo-app h2{
-    color: black;
+    color: var(--black-1);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
+#dark_mode{
+    margin-left: auto;
+}
 .todo-app img{
-    width:  30px;
+    height:  30px;
     margin-left: 10px;
 }
 .row{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #d6d1d1;
+    background: var(--black-2);
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
 }
 input{
     flex: 1;
+    color:var(--black-1);
     min-width: 150px;
     border: none;
     outline: none;
@@ -47,12 +72,16 @@ input{
     font-size: 16px;
     font-weight: 600;
 }
+input::placeholder {
+    color: var(--place-holder); /* Change this to your desired color */
+    /* opacity: 1;  Ensure the color is fully opaque */
+  }
 button{
     border: none;
     outline: none;
     padding: 16px 50px;
     background: #ff5945 ;
-    color: black;
+    color: var(--black-1);
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -79,7 +108,7 @@ ul li::before{
 
 }
 ul li.checked{
-    color: #555;
+    color: var(--black-3);
     text-decoration: line-through;
 
 }
@@ -93,13 +122,13 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: var(--black-3);
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 ul li span:hover{
-    background: #edeef0;
+    background: var(--black-2);
 }
 
 

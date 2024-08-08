@@ -29,6 +29,17 @@ listContainer.addEventListener('click', (e)=>{
     }
 },false);
 
+var darkMode = document.getElementById("dark_mode");
+
+darkMode.onclick = function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        darkMode.src= "images/sun.png";
+    }else{
+        darkMode.src= "images/moon.png";
+    }
+}
+
 function saveData(){    
     localStorage.setItem("data", listContainer.innerHTML);
 }
