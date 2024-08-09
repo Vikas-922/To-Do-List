@@ -93,6 +93,10 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
+    height: 40px;
+    margin-bottom:5px ;
+    background-color: rgba(205, 224, 204, 0.371); 
+    border-radius: 50px;
 }
 ul li::before{
     content: '';
@@ -103,9 +107,10 @@ ul li::before{
     background-image: url(images/unchecked.png);
     background-size: cover;
     background-position: center;
-    top: 12px;
-    left: 8px;
-
+    top: 50%; /* Move to the vertical center */
+    left: 8px; /* Align with left padding */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    
 }
 ul li.checked{
     color: var(--black-3);
@@ -118,7 +123,7 @@ ul li.checked::before{
 ul li span{
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 0;
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -126,9 +131,12 @@ ul li span{
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+
 }
 ul li span:hover{
     background: var(--black-2);
+    transform: scale(0.8);    /* to reduce backgrond hover blur size    */
 }
 
 
